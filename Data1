@@ -1,0 +1,6 @@
+data/citywise_weather.csv
+city,avg_temp_c,avg_humidity
+Delhi,26.2,48
+Mumbai,30.4,70
+Kolkata,29.1,68
+Chennai,32.0,65
