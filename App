@@ -1,0 +1,16 @@
+app/streamlit_app.py
+import streamlit as st
+import pandas as pd
+
+st.title("🌦️ Weather Data Analytics")
+
+@st.cache_data
+def load_data(path):
+    return pd.read_csv(path)
+
+st.write("### Sample Preview of India Weather Data")
+try:
+    df = load_data("../data/india_weather.csv")
+    st.dataframe(df.head())
+except Exception:
+    st.warning("Please upload data/india_weather.csv to preview.")
